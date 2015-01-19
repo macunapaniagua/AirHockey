@@ -5,6 +5,7 @@
  */
 package Codigo;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -23,20 +24,24 @@ public class BolaNormal extends Thread {
     protected final int anchoAreaJuego;
     protected boolean direccionNorteSur;
     protected boolean direccionOesteEste;
+    
+    protected ArrayList<Paleta> jugadores;
 
-    protected int velocidadHorizontal;
-    protected int velocidadVertical;
+////////////////////    protected int velocidadHorizontal;
+////////////////////    protected int velocidadVertical;
 
     /**
      * Metodo constructor
      * @param pImagen Label con la imagen de la bola
      * @param pAltoCancha Altura del terreno de juego
      * @param pAnchoCancha  Ancho del terreno de juego
+     * @param pJugadores Arreglo con los dos jugadores
      */
-    public BolaNormal(JLabel pImagen, int pAltoCancha, int pAnchoCancha) {
+    public BolaNormal(JLabel pImagen, int pAltoCancha, int pAnchoCancha, ArrayList pJugadores) {
         imagenBola = pImagen;
         altoAreaJuego = pAltoCancha;
         anchoAreaJuego = pAnchoCancha;
+        jugadores = pJugadores;
         // Se generan las direcciones de las bolas de manera aleatoria
         Random rand = new Random();
         direccionOesteEste = rand.nextBoolean();

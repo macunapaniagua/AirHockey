@@ -5,6 +5,7 @@
  */
 package Codigo;
 
+import java.util.ArrayList;
 import javax.swing.JLabel;
 
 /**
@@ -13,8 +14,8 @@ import javax.swing.JLabel;
  */
 public class BolaFuego extends BolaNormal {
 
-    public BolaFuego(JLabel pImagen, int pAltoCancha, int pAnchoCancha) {
-        super(pImagen, pAltoCancha, pAnchoCancha);
+    public BolaFuego(JLabel pImagen, int pAltoCancha, int pAnchoCancha, ArrayList pJugadores) {
+        super(pImagen, pAltoCancha, pAnchoCancha, pJugadores);
     }
 
 }

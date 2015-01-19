@@ -59,6 +59,22 @@ public class Paleta extends Thread {
     }
     
     /**
+     * Metodo utilizado para obtener la direccion vertical de la paleta
+     * @return 'c' si no esta en movimiento, 'a' si va hacia arriba o 'b' si es hacia abajo
+     */
+    public char getDireccionVertical(){
+        return direccionVertical;
+    }
+    
+    /**
+     * Metodo utilizado para obtener la direccion horizontal del movimiento de la paleta 
+     * @return 'c' si no esta en movimiento, 'd' si va hacia la derecha o 'i' hacia la izquierda
+     */
+    public char getDireccionHorizontal(){
+        return direccionVertical;
+    }
+    
+    /**
      * Metodo utilizado para decirle al hilo que el juego ha terminado
      */
     public void finalizarJuego(){

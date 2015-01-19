@@ -103,9 +103,9 @@ public class AreaDeJuego extends javax.swing.JFrame implements Constantes {
         // Se crea el ArrayList y todas las bolas que van a participar en el juego
         bolas = new ArrayList<>();
 
-        bolaDeFuego = new BolaFuego(Lbl_BolaFuego, ALTO_AREA_JUEGO, ANCHO_AREA_JUEGO);
-        bolaNormal = new BolaNormal(Lbl_BolaNormal, ALTO_AREA_JUEGO, ANCHO_AREA_JUEGO);
-        bolaAleatoria = new BolaRandom(Lbl_BolaRandom, ALTO_AREA_JUEGO, ANCHO_AREA_JUEGO);
+        bolaDeFuego = new BolaFuego(Lbl_BolaFuego, ALTO_AREA_JUEGO, ANCHO_AREA_JUEGO, jugadores);
+        bolaNormal = new BolaNormal(Lbl_BolaNormal, ALTO_AREA_JUEGO, ANCHO_AREA_JUEGO, jugadores);
+        bolaAleatoria = new BolaRandom(Lbl_BolaRandom, ALTO_AREA_JUEGO, ANCHO_AREA_JUEGO, jugadores);
 
         bolas.add(bolaNormal);
         bolas.add(bolaDeFuego);

@@ -62,8 +62,7 @@ public class Temporizador extends Thread {
      * @param pTeleports teleports que se mueven alrededor del campo de juego
      * @param pBolas bolas del juego
      */
-    public void agregarHilosDeJuego(ArrayList<Paleta> pJugadores, ArrayList<Bloque> pBloques,
-            ArrayList<Teleport> pTeleports, ArrayList<BolaNormal> pBolas) {
+    public void agregarHilosDeJuego(ArrayList pJugadores, ArrayList pBloques, ArrayList pTeleports, ArrayList pBolas) {
         bloques = pBloques;
         jugadores = pJugadores;
         teleports = pTeleports;
@@ -131,7 +130,7 @@ public class Temporizador extends Thread {
             teleport.finalizarJuego();
         }
         for(BolaNormal bola : bolas){
-            bola.enJuego = false;
+            bola.finalizarJuego();
         }
         JOptionPane.showMessageDialog(null, "Juego Finalizado");
     }
